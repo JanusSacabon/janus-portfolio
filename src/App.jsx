@@ -325,14 +325,14 @@ export default function Portfolio() {
             infrastructure deployment.
           </p>
         </Section>
-
+          <div className="section-divider"></div>
         {/* Skills */}
         <Section id="skills" title="Technical Skills">
           <div className="skills-grid">
             {SKILLS.map((s, i) => <SkillCard key={s.cat} {...s} index={i} />)}
           </div>
         </Section>
-
+          <div className="section-divider"></div>
         {/* Experience */}
         <Section id="experience" title="Work History">
           <div className="timeline">
@@ -349,7 +349,7 @@ export default function Portfolio() {
             />
           </div>
         </Section>
-
+          <div className="section-divider"></div>
         {/* Education */}
         <Section id="education" title="Education">
           <div className="timeline">
@@ -361,7 +361,7 @@ export default function Portfolio() {
             />
           </div>
         </Section>
-
+          <div className="section-divider"></div>
         {/* Project */}
         <Section id="project" title="Featured Project">
           <div className="project-card">
@@ -390,7 +390,7 @@ export default function Portfolio() {
             </div>
           </div>
         </Section>
-
+            <div className="section-divider"></div>
         {/* Certifications */}
         <Section id="certifications" title="Licenses, Certifications & Training">
           <div className="certs-grid">
@@ -712,6 +712,30 @@ h1 {
 .section-block { padding: 2.65rem 0 2.9rem; scroll-margin-top: 5rem; }
 .section-block + .section-block { border-top: 1px solid var(--gold-soft); }
 .section-heading { margin-bottom: 1.6rem; }
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--gold-soft) 20%, 
+    var(--mint-600) 50%, 
+    var(--gold-soft) 80%, 
+    transparent
+  );
+  margin: 1rem 0;
+  position: relative;
+}
+.section-divider::after {
+  content: '⬡';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg);
+  padding: 0 10px;
+  color: var(--mint-600);
+  font-size: 0.8rem;
+}
 
 h2 {
   font-size: 1.25rem; font-weight: 700;
