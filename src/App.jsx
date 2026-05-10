@@ -1,4 +1,6 @@
-cription:
+export default function Portfolio() {
+          </p>
+
           <h2 className="text-4xl font-black">Featured Work</h2>
         </div>
 
