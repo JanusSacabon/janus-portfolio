@@ -150,7 +150,7 @@ function SkillCard({ cat, items, icon, index }) {
   );
 }
 
-function TimelineItem({ title, sub, meta, bullets, isLast }) {
+function TimelineItem({ title, sub, meta, bullets, isLast, logo }) {
   const [ref, visible] = useFadeIn();
   return (
     <div
@@ -167,8 +167,13 @@ function TimelineItem({ title, sub, meta, bullets, isLast }) {
         {!isLast && <span className="timeline-line" />}
       </div>
       <div className="timeline-body">
-        <h3 className="timeline-title">{title}</h3>
-        {sub && <p className="timeline-sub">{sub}</p>}
+        <div className="timeline-header">
+          {logo && <img src={logo} alt="" className="timeline-logo" />}
+          <div>
+            <h3 className="timeline-title">{title}</h3>
+            {sub && <p className="timeline-sub">{sub}</p>}
+          </div>
+        </div>
         <p className="meta">{meta}</p>
         {bullets && (
           <ul className="list" style={{ marginTop: "0.6rem" }}>
@@ -349,7 +354,7 @@ export default function Portfolio() {
     <TimelineItem
       title="Intern — Network Operations Center"
       sub="DCTV Cable Network Broadband Services Inc."
-      meta="2024"
+      meta="June 2024 - July 2024"
       bullets={[
         "Built and updated network graphs for new client installations, enabling accurate traffic monitoring and faster troubleshooting for the NOC team.",
         "Performed optical fiber fusion splicing on live and test cables, achieving low-loss connections that supported network reliability and service expansion.",
@@ -361,16 +366,24 @@ export default function Portfolio() {
 </Section>
           <div className="section-divider"></div>
         {/* Education */}
-        <Section id="education" title="Education">
-          <div className="timeline">
-            <TimelineItem
-              title="Bachelor of Science in Electronics Engineering (BSECE)"
-              sub="Bicol University Polangui"
-              meta="2021 – 2025"
-              isLast
-            />
-          </div>
-        </Section>
+       <Section id="education" title="Education">
+  <div className="timeline">
+    <TimelineItem
+      title="Bachelor of Science in Electronics Engineering (BSECE)"
+      sub="Bicol University Polangui"
+      meta="2021 – 2025"
+      logo="/bu.png"
+    />
+    <TimelineItem
+      title="Junior/Senior High School Diploma"
+      sub="Ateneo de Naga University"
+      meta="Jun 2015 – Apr 2021"
+      bullets={["Science, Engineering, Technology, and Mathematics (STEM)"]}
+      logo="/adnu.png"
+      isLast
+    />
+  </div>
+</Section>
           <div className="section-divider"></div>
         {/* Project */}
         <Section id="project" title="Featured Project">
@@ -891,6 +904,23 @@ h2::after {
   font-weight: 700; color: var(--text); margin-bottom: 0.1rem;
 }
 .timeline-sub { font-weight: 600; color: var(--mint-700); font-size: 0.95rem; }
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+.timeline-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: #fff;
+  padding: 3px;
+  border: 1px solid var(--border);
+}
+
 .meta { color: var(--muted); font-size: 0.88rem; margin-top: 0.1rem; }
 
 .list { 
