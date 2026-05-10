@@ -878,9 +878,25 @@ h2::after {
 .timeline-sub { font-weight: 600; color: var(--mint-700); font-size: 0.95rem; }
 .meta { color: var(--muted); font-size: 0.88rem; margin-top: 0.1rem; }
 
-.list { padding-left: 1.1rem; }
-.list li { margin: 0.3rem 0; font-size: 0.93rem; color: #334155; }
-.list li::marker { color: var(--mint-600); }
+.list { 
+  padding-left: 0; 
+  list-style: none; 
+}
+.list li { 
+  margin: 0.3rem 0; 
+  font-size: 0.93rem; 
+  color: #334155;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.list li::before {
+  content: '•';
+  position: absolute;
+  left: 0.25rem;
+  color: var(--mint-600);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
 
 /* Project card */
 .project-card {
