@@ -701,7 +701,7 @@ h1 {
 }
 
 /* Sections */
-.section-block { padding: 2.65rem 0 2.9rem; }
+.section-block { padding: 2.65rem 0 2.9rem; scroll-margin-top: 5rem; }
 .section-block + .section-block { border-top: 1px solid var(--gold-soft); }
 .section-heading { margin-bottom: 1.6rem; }
 
