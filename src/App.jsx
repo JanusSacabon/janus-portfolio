@@ -554,10 +554,7 @@ h1,h2,h3,h4 { font-family: var(--ff-head); letter-spacing: -0.025em; }
 .hero {
   margin-top: 1.5rem;
   padding: 2.75rem 0 3.25rem;
-  border-bottom: 1px solid var(--gold-soft);
-  min-height: calc(100vh - 4rem); 
-  display: flex;                   
-  align-items: center;             
+  border-bottom: 1px solid var(--gold-soft);           
 }
 
 .hero-layout {
