@@ -1009,6 +1009,91 @@ h2::after {
 }
 .footer a:hover { color: var(--ruby); }
 
+/* About section styling */
+.about-text {
+  max-width: 65ch;
+  color: #334155;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  padding: 1.5rem 1.8rem;
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.04), rgba(201, 165, 74, 0.04));
+  border-left: 3px solid var(--mint-600);
+  border-radius: 0 12px 12px 0;
+  position: relative;
+}
+.about-text::first-letter {
+  font-size: 2.5rem;
+  font-family: var(--ff-head);
+  font-weight: 700;
+  color: var(--mint-600);
+  float: left;
+  line-height: 1;
+  margin-right: 0.5rem;
+}
+
+/* Experience card styling */
+.timeline-body {
+  padding: 1.2rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.timeline-body:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(15, 118, 110, 0.25);
+}
+.timeline-title {
+  font-family: var(--ff-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+}
+.timeline-sub {
+  font-weight: 600;
+  color: var(--mint-700);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.timeline-sub::before {
+  content: '🏢';
+  font-size: 0.85rem;
+}
+
+/* Education card styling */
+#education .timeline-body {
+  padding: 1.2rem 1.5rem;
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.05), rgba(201, 165, 74, 0.03));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+#education .timeline-sub::before {
+  content: '🎓';
+  font-size: 0.85rem;
+}
+
+.timeline-body .list {
+  padding-left: 0;
+  list-style: none;
+}
+.timeline-body .list li {
+  padding-left: 1.4rem;
+  position: relative;
+  margin: 0.4rem 0;
+}
+.timeline-body .list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0.2rem;
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
 /* Mobile */
 @media (max-width: 860px) {
   .hamburger { display: flex; }
