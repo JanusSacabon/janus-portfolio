@@ -277,10 +277,10 @@ export default function Portfolio() {
                 <a href="mailto:jxsacabon@gmail.com">jxsacabon@gmail.com</a>
               </p>
               <p className="subtitle">
-                CCNA-Certified Network Engineer and Licensed Electronics Engineer with hands-on experience managing and deploying infrastructure across 200+ nationwide      retail sites. Proficient in configuring Cisco, Fortinet, and ExtremeNetworks devices. Competent in SD-WAN and enterprise routing/switching to ensure high-availability network operations.
+                CCNA-Certified Network Engineer and Licensed Electronics Engineer with hands-on experience managing and deploying infrastructure across 200+ store locations nationwide.
               </p>
               <ul className="highlight-list">
-                <li>Network Specialist · Power Mac Center Inc. (2026–present)</li>
+                <li>Licensed Electronics Engineer · valid through September 2029</li>
                 <li>CCNA · valid through February 2029</li>
               </ul>
               <div className="actions">
@@ -289,7 +289,7 @@ export default function Portfolio() {
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
                 </a>
                 <a className="btn btn-outline" href="https://linkedin.com/in/jxsacabon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a className="btn btn-outline" href="https://github.com/JanusXavierSacabon" target="_blank" rel="noopener noreferrer">GitHub</a>
+            
               </div>
             </div>
             <div className="hero-photo-wrap hero-photo-animate">
@@ -298,7 +298,7 @@ export default function Portfolio() {
                   className="hero-photo"
                   src="./janus-sacabon-photo.jpg"
                   alt="Janus Xavier R. Sacabon"
-                  width="400" height="400"
+                  width="600" height="600"
                   loading="eager" decoding="async"
                 />
               </div>
