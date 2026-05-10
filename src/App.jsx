@@ -29,6 +29,7 @@ const CERTS = [
     date:   "February 2026",
     detail: "Cisco ID: CSCO15040742 · Valid through Feb 16, 2029",
     badge:  "CCNA",
+     logo:   "/cisco.png",  
   },
   {
     name:   "Licensed Electronics Engineer",
@@ -36,6 +37,7 @@ const CERTS = [
     date:   "March 2026",
     detail: "Valid through Sep 08, 2029",
     badge:  "PRC",
+    logo:   "/prc.png",
   },
   {
     name:   "Licensed Electronics Technician",
@@ -43,6 +45,7 @@ const CERTS = [
     date:   "March 2026",
     detail: "Valid through Sep 08, 2029",
     badge:  "PRC",
+    logo:   "/prc.png",
   },
   {
     name:   "CCNA 200-301 Training Bootcamp",
@@ -50,6 +53,7 @@ const CERTS = [
     date:   "January 2026",
     detail: "Subnetting, VLANs, inter-VLAN routing, OSPF, NAT, ACLs, troubleshooting; lab work on Cisco gear; docs and introductory automation.",
     badge:  "BOOT",
+    logo:   "/rivan.png",
   },
 ];
 
@@ -176,7 +180,7 @@ function TimelineItem({ title, sub, meta, bullets, isLast }) {
   );
 }
 
-function CertCard({ name, issuer, date, detail, badge, index }) {
+function CertCard({ name, issuer, date, detail, badge, logo, index }) {
   const [ref, visible] = useFadeIn(0.05);
   return (
     <div
@@ -188,7 +192,11 @@ function CertCard({ name, issuer, date, detail, badge, index }) {
         transition: `opacity 0.5s ease ${index * 80}ms, transform 0.5s ease ${index * 80}ms`,
       }}
     >
-      <div className="cert-badge">{badge}</div>
+      <div className="cert-badge"><img 
+          src={logo} 
+          alt={`${badge} logo`}
+          className="cert-logo"
+        /></div>
       <div className="cert-body">
         <p className="cert-name">{name}</p>
         <p className="cert-issuer">{issuer} · {date}</p>
@@ -858,14 +866,22 @@ h2::after {
 }
 .cert-badge {
   flex-shrink: 0;
-  width: 50px; height: 50px; border-radius: 12px;
-  background: linear-gradient(135deg, var(--mint-700), var(--mint-600));
-  color: #fff;
-  font-family: var(--ff-head); font-weight: 800;
-  font-size: 0.6rem; letter-spacing: 0.06em;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; line-height: 1.25;
+  width: 50px; 
+  height: 50px; 
+  border-radius: 12px;
+  background: #fff; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   box-shadow: 0 4px 12px rgba(15,118,110,0.24);
+  overflow: hidden; 
+  border: 2px solid var(--border);
+}
+.cert-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* This ensures the logo fits nicely without being cropped */
+  padding: 4px;  /* Gives the logo some breathing room */
 }
 .cert-name {
   font-family: var(--ff-head); font-weight: 700;
