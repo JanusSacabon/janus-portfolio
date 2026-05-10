@@ -277,8 +277,7 @@ export default function Portfolio() {
                 <a href="mailto:jxsacabon@gmail.com">jxsacabon@gmail.com</a>
               </p>
               <p className="subtitle">
-                CCNA-Certified Network Engineer with enterprise routing and switching experience,
-                plus real-world ops in retail and WAN environments across 100+ sites.
+                CCNA-Certified Network Engineer and Licensed Electronics Engineer with hands-on experience managing and deploying infrastructure across 200+ nationwide      retail sites. Proficient in configuring Cisco, Fortinet, and ExtremeNetworks devices. Competent in SD-WAN and enterprise routing/switching to ensure high-availability network operations.
               </p>
               <ul className="highlight-list">
                 <li>Network Specialist · Power Mac Center Inc. (2026–present)</li>
@@ -334,9 +333,9 @@ export default function Portfolio() {
               sub="Power Mac Center Inc."
               meta="March 2026 – Present"
               bullets={[
-                "Monitored and supported network operations for corporate offices and 100+ stores nationwide.",
-                "Configured and deployed network infrastructure for 10+ store locations.",
-                "Managed multiple Fortinet firewalls via FortiGate and SD-WAN.",
+                "Monitored and supported network operations for corporate offices and 200+ stores nationwide.",
+                "Configured and deployed network infrastructure for multiple store locations.",
+                "Managed network devices through Cloud and SD-WAN.",
               ]}
               isLast
             />
