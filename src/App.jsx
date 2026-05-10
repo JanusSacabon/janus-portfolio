@@ -552,21 +552,22 @@ h1,h2,h3,h4 { font-family: var(--ff-head); letter-spacing: -0.025em; }
 .page-column { padding-bottom: 0.5rem; }
 
 .hero {
-  margin-top: 1.5rem;
-  padding: 2.75rem 0 3.25rem;
+  margin-top: 0;
+  padding: 0;
   border-bottom: none;
   position: relative;
-  min-height: calc(100vh - 4rem);
+  height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 
 /* Top flashy line */
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 1.5rem;
   left: 5%;
   right: 5%;
   height: 2px;
@@ -586,7 +587,7 @@ h1,h2,h3,h4 { font-family: var(--ff-head); letter-spacing: -0.025em; }
 .hero::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 1.5rem;
   left: 5%;
   right: 5%;
   height: 2px;
