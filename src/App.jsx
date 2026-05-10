@@ -552,12 +552,55 @@ h1,h2,h3,h4 { font-family: var(--ff-head); letter-spacing: -0.025em; }
 .page-column { padding-bottom: 0.5rem; }
 
 .hero {
-  margin-top: 0;
-  padding: 0;
-  border-bottom: 1px solid var(--gold-soft);
-  min-height: calc(100vh - 4rem);
-  display: flex;
-  align-items: center;
+  margin-top: 1.5rem;
+  padding: 2.75rem 0 3.25rem;
+  border-bottom: none;
+  position: relative;
+}
+
+/* Top flashy line */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--gold) 20%, 
+    var(--mint-600) 50%, 
+    var(--gold) 80%, 
+    transparent
+  );
+  border-radius: 2px;
+  opacity: 0.7;
+  animation: heroLineGlow 3s ease-in-out infinite;
+}
+
+/* Bottom flashy line */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--mint-600) 20%, 
+    var(--gold) 50%, 
+    var(--mint-600) 80%, 
+    transparent
+  );
+  border-radius: 2px;
+  opacity: 0.7;
+  animation: heroLineGlow 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes heroLineGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
 }
 
 .hero-layout {
@@ -678,7 +721,7 @@ h1 {
 }
 .hero-photo {
   display: block;
-  width: min(255px, 44vw); height: auto; aspect-ratio: 1;
+  width: min(320px, 50vw); height: auto; aspect-ratio: 1;
   object-fit: cover; object-position: 50% 18%;
   border-radius: 50%; border: 4px solid #fff;
   transition: transform 0.4s ease;
