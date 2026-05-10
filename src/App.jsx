@@ -857,13 +857,18 @@ h2::after {
   gap: 0 1rem;
 }
 .timeline-marker {
-  display: flex; flex-direction: column;
-  align-items: center; padding-top: 0.32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
 }
 .timeline-dot {
-  width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0;
-  background: linear-gradient(135deg, var(--mint-600), var(--gold));
-  box-shadow: 0 0 0 3px var(--gold-glow);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--mint-600);
+  box-shadow: 0 0 0 3px var(--gold-glow), 0 0 8px rgba(15, 118, 110, 0.3);
 }
 .timeline-line {
   flex: 1; width: 2px; margin-top: 6px;
@@ -1015,20 +1020,28 @@ h2::after {
   color: #334155;
   line-height: 1.9;
   font-size: 1.05rem;
-  padding: 1.5rem 1.8rem;
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.04), rgba(201, 165, 74, 0.04));
-  border-left: 3px solid var(--mint-600);
-  border-radius: 0 12px 12px 0;
+  padding: 1.8rem 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
   position: relative;
+  backdrop-filter: blur(8px);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
-.about-text::first-letter {
-  font-size: 2.5rem;
-  font-family: var(--ff-head);
-  font-weight: 700;
-  color: var(--mint-600);
-  float: left;
-  line-height: 1;
-  margin-right: 0.5rem;
+.about-text:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(15, 118, 110, 0.25);
+}
+.about-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--mint-600), var(--gold), var(--mint-600));
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 /* Experience card styling */
