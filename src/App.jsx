@@ -1077,18 +1077,7 @@ h2::after {
   font-size: 0.85rem;
 }
 
-/* Education card styling */
-#education .timeline-body {
-  padding: 1.2rem 1.5rem;
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.05), rgba(201, 165, 74, 0.03));
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-}
-#education .timeline-sub::before {
-  content: '🎓';
-  font-size: 0.85rem;
-}
+
 
 .timeline-body .list {
   padding-left: 0;
@@ -1105,6 +1094,24 @@ h2::after {
   left: 0.2rem;
   color: var(--gold);
   font-size: 0.9rem;
+}
+
+/* Education card styling */
+#education .timeline-body {
+  padding: 1.2rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+#education .timeline-body:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(15, 118, 110, 0.25);
+}
+#education .timeline-sub::before {
+  content: '🎓';
+  font-size: 0.85rem;
 }
 
 /* Mobile */
