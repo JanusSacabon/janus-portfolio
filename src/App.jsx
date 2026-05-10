@@ -556,7 +556,10 @@ h1,h2,h3,h4 { font-family: var(--ff-head); letter-spacing: -0.025em; }
   padding: 2.75rem 0 3.25rem;
   border-bottom: none;
   position: relative;
-  min-height: calc(100vh - 4rem);  /* Add this */
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Top flashy line */
@@ -609,7 +612,6 @@ h1,h2,h3,h4 { font-family: var(--ff-head); letter-spacing: -0.025em; }
   grid-template-columns: 1fr auto;
   gap: 3rem;
   align-items: center;
-  min-height: calc(100vh - 4rem - 6rem);  /* Subtract header + hero padding */
 }
 
 @keyframes heroFadeUp {
@@ -730,13 +732,14 @@ h1 {
   object-position: 50% 18%;
   border-radius: 50%;
   border: 4px solid #fff;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.5s ease;
 }
-
 .hero-photo:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(15, 118, 110, 0.25), 0 0 60px rgba(201, 165, 74, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 
+    0 0 0 10px rgba(15, 118, 110, 0.15),
+    0 0 0 25px rgba(201, 165, 74, 0.08),
+    0 0 0 45px rgba(15, 118, 110, 0.04);
 }
 
 .photo-badge {
