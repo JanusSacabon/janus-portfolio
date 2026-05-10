@@ -335,20 +335,30 @@ export default function Portfolio() {
           <div className="section-divider"></div>
         {/* Experience */}
         <Section id="experience" title="Work History">
-          <div className="timeline">
-            <TimelineItem
-              title="Network Specialist"
-              sub="Power Mac Center Inc."
-              meta="March 2026 – Present"
-              bullets={[
-                "Monitored and supported network operations for corporate offices and 200+ stores nationwide.",
-                "Configured and deployed network infrastructure for multiple store locations.",
-                "Managed network devices through Cloud and SD-WAN.",
-              ]}
-              isLast
-            />
-          </div>
-        </Section>
+  <div className="timeline">
+    <TimelineItem
+      title="Network Specialist"
+      sub="Power Mac Center Inc."
+      meta="March 2026 – Present"
+      bullets={[
+        "Monitored and supported network operations for corporate offices and 200+ stores nationwide.",
+        "Configured and deployed network infrastructure for multiple store locations.",
+        "Managed network devices through Cloud and SD-WAN.",
+      ]}
+    />
+    <TimelineItem
+      title="Intern — Network Operations Center"
+      sub="DCTV Cable Network Broadband Services Inc."
+      meta="2024"
+      bullets={[
+        "Built and updated network graphs for new client installations, enabling accurate traffic monitoring and faster troubleshooting for the NOC team.",
+        "Performed optical fiber fusion splicing on live and test cables, achieving low-loss connections that supported network reliability and service expansion.",
+        "Conducted hands-on diagnostics in the server room, assisting in testing, maintaining, and repairing optical fiber amplifiers and related network equipment.",
+      ]}
+      isLast
+    />
+  </div>
+</Section>
           <div className="section-divider"></div>
         {/* Education */}
         <Section id="education" title="Education">
